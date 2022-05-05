@@ -1,4 +1,4 @@
 <?php
-    echo "Index.php"
+    echo $_GET["url"];
 
 ?>
