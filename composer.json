@@ -1,0 +1,20 @@
+{
+    "name": "minh0/doantonghop",
+    "autoload": {
+        "psr-4": {
+            "Core\\": "Core/",
+            "App\\": "App/"
+        }
+    },
+    "authors": [
+        {
+            "name": "minh",
+            "email": "ldm20042000@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "2.0",
+        "php-http/guzzle6-adapter": "1.1",
+        "php-http/message": "1.4"
+    }
+}
