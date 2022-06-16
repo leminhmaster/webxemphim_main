@@ -39,6 +39,7 @@ mabophim varchar(20) not null primary key,
 tenbophim varchar(100) character set utf8mb4 not null,
 tomtatphim text character set utf8mb4,
 namphathanh varchar(5) not null,
+ngaykhoitao datetime not null default(curdate()),
 ngaycapnhat datetime not null default(curdate()),
 sotap bigint not null,
 linkanh text not null,
@@ -74,7 +75,7 @@ maloaitp int not null references loaitapphim(maloaitp),
 tentapphim varchar(100) character set utf8mb4 not null,
 luotxem bigint not null default(0),
 tpso int not null,
-linkanhtp text character set utf8 not null,
+thoiluong varchar(20),
 trangthai tinyint not null
 )engine=InnoDB;
 
@@ -108,9 +109,16 @@ pass varchar(24) not null,
 email varchar(255) not null,
 tennguoidung varchar(50) character set utf8mb4 not null,
 linkavatar varchar(255) character set latin1,
-ismember boolean not null,
-trangthai tinyint not null
+chucvu tinyint not null,
+trangthai tinyint not null,
+makhoiphuc varchar(10) not null
 )engine=InnoDB default charset = latin1;
+#bảng lưu token để lưu lại đăng nhập cho lần sau
+create table nhodangnhap(
+token_hash varchar(64) not null primary key,
+user_id bigint not null,
+ngayhethan datetime not null
+);
 
 #bảng lưu bình luận của người dùng
 create table binhluan(
@@ -128,7 +136,9 @@ create table danhgia(
 mabophim varchar(20) not null references ttphim(mabophim),
 id bigint not null references taikhoan(id),
 diemdanhgia int,
-dangtheodoi bool
+dangtheodoi bool,
+ngaytheodoi datetime not null,
+ngaydanhgia datetime
 )engine=InnoDB;
 
 #bảng lưu lại phản hồi của người xem

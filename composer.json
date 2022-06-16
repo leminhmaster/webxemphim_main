@@ -1,20 +1,22 @@
 {
-    "name": "minh0/doantonghop",
-    "autoload": {
-        "psr-4": {
-            "Core\\": "Core/",
-            "App\\": "App/"
-        }
-    },
+    "name": "minh0/webghichu",
+    "description": "minh",
     "authors": [
         {
-            "name": "minh",
-            "email": "ldm20042000@gmail.com"
+            "name": "minh"
         }
     ],
     "require": {
-        "twig/twig": "2.0",
-        "php-http/guzzle6-adapter": "1.1",
-        "php-http/message": "1.4"
+        "phpmailer/phpmailer": "^6.6",
+        "twig/twig": "~2.0",
+        "php-http/guzzle6-adapter": "^2.0",
+        "php-http/message": "^1.13",
+        "symfony/asset": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+             "Core\\": "Core/",
+             "App\\": "App/"
+        }
     }
 }

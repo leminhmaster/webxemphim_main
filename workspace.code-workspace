@@ -1,11 +1,19 @@
 {
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "..\\mvcfinal"
-		}
-	],
-	"settings": {}
+    "folders": [
+        {
+            "path": "..\\mvcfinal"
+        },
+        {
+            "path": "."
+        },
+        {
+            "path": "..\\sendmail"
+        },
+        {
+            "path": "..\\Webghichu"
+        }
+    ],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "doantonghop"
+    }
 }
